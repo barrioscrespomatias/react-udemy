@@ -2,7 +2,7 @@
 // heroes importacion por defecto
 // owners importacion individual mediante desestructuración.
 
-import heroes, {owners} from './data/heroes';
+import heroes, {owners} from '../data/heroes';
 
 
 const getHeroeById = (id) =>{
@@ -15,5 +15,7 @@ const getHeroeByOwner = (owner) =>{
     return heroes.filter(element => element.owner === owner);
 };
 
-console.log(getHeroeByOwner('DC'));
+export default getHeroeById;
+
+// console.log(getHeroeByOwner('DC'));
 
