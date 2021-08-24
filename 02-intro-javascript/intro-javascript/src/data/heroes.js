@@ -26,4 +26,8 @@ const heroes = [
     },
 ];
 
+//Exportacion individual
+export const owners = ['Marvel','DC'];
+
+//Exportacion por defecto
 export default heroes;
