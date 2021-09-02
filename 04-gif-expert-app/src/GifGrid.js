@@ -10,15 +10,19 @@ import './index.css';
 
 
 export const GifGrid = ({ category }) => {
-
-
-
-
     const [images, setImages] = useState([]);
 
     /**
      * useEffecto en el que se usa el Component GetGifList
      * Este es retornado como una promesa, por lo que se debe utilizar then.
+     */
+
+    /**
+     * useEffect hace que el funcionamiento se realiza solo una vez. 
+     * Si tenemos una petición, la va a realizar cada vez que se le de funcionalidad pero
+     * al resto del codigo solo lo ejecutará una vez.
+     * 
+     * En este caso se ejecutará este código cuando la categoría cambie.
      */
     useEffect(() => {
         getGifs(category)
