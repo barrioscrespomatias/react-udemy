@@ -26,7 +26,7 @@ export const GifGrid = ({ category }) => {
                 url: item.images.downsized_medium.url,
             }
         });
-        // console.log(gifs);
+        console.log(gifs);
         setImages(gifs);
     }
 
