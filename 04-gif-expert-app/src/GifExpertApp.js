@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { CategoryAdd } from './CategoryAdd';
 import { GifGrid } from './GifGrid';
 
@@ -14,11 +14,11 @@ const GifExpertApp = props => {
      * No se puede pisar directamente con un string ya que sino el objeto deja de ser un array y pasa a ser un strting
      * 
      */
-    const handleAdd = () => {
-        setCategory((cats) => [...cats, 'Power Rangers']);
-    }
+    // const handleAdd = () => {
+    //     setCategory((cats) => [...cats, 'Power Rangers']);
+    // }
 
-    console.log(category);
+    // console.log(category);
 
     return (
         <Fragment>
@@ -39,6 +39,7 @@ const GifExpertApp = props => {
             }
         </ol>
          */}
+             <CategoryAdd setCategory={setCategory}></CategoryAdd>
 
             <ol>
                 {
@@ -51,7 +52,7 @@ const GifExpertApp = props => {
                 }
             </ol>
 
-            <CategoryAdd setCategory={setCategory}></CategoryAdd>
+            
             {/* <CategoryAdd ></CategoryAdd> */}
 
         </Fragment>

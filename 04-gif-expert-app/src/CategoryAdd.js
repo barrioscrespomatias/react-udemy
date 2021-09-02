@@ -9,7 +9,7 @@ export const CategoryAdd = ({ setCategory= ()=> 'Se debe pasar una funcion'}) =>
         e.preventDefault();    
         
         if (inputValue.trim().length > 2) {
-            setCategory( cats => [...cats, inputValue]);       
+            setCategory( cats => [inputValue, ...cats]);       
             setInputValue('');
         }      
         
