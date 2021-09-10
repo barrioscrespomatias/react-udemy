@@ -11,37 +11,36 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    margin: 20,       
   },
-  
+  media: {
+    height: 140,
+  },
 });
 
-
-export default function CardGridItem({id, title, url}) {
+export default function MediaCard() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"          
-          image={url}
-          title={title}
+          className={classes.media}
+          image="/static/images/cards/contemplative-reptile.jpg"
+          title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {id}
+            Lizard
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {title}
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Compartir
+          Share
         </Button>
         <Button size="small" color="primary">
           Learn More
